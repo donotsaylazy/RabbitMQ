@@ -22,7 +22,7 @@
     <!-- Continue going here -->
 
     <!--<typeAliases>-->
-    <!--<package name="cn.com.countrygarden.ucenter.entity"/>-->
+        <!--<package name="cn.com.countrygarden.ucenter.entity"/>-->
     <!--</typeAliases>-->
     <plugins>
         <!-- com.github.pagehelper为PageHelper类所在包名 -->
