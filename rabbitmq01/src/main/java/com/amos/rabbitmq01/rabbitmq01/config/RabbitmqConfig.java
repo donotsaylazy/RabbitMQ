@@ -117,4 +117,23 @@ public class RabbitmqConfig {
     }
 
 
+    /**
+     * 模拟抢单消息队列模型创建
+     */
+    @Bean
+    public DirectExchange robbingExchange(){
+        return new DirectExchange(env.getProperty("product.robbing.mq.exchange.name"),true,false,null);
+    }
+
+
+    @Bean(name = "robbingQueue")
+    public Queue robbingQueue(){
+        return new Queue(env.getProperty("product.robbing.mq.queue.name"),true);
+    }
+
+    @Bean
+    public Binding robbingBinding(){
+        return BindingBuilder.bind(robbingQueue()).to(robbingExchange()).with(env.getProperty("product.robbing.mq.routing.key.name"));
+    }
+
 }

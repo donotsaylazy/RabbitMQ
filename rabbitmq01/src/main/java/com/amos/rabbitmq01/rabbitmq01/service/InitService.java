@@ -13,7 +13,7 @@ public class InitService {
 
     private static final Logger log= LoggerFactory.getLogger(InitService.class);
 
-    public static final int ThreadNum = 500000;
+    public static final int ThreadNum = 500;
 
     private static int mobile=0;
 
@@ -54,7 +54,8 @@ public class InitService {
                 startLatch.await();
                 mobile+=1;
 
-                concurrencyService.manageRobbing(String.valueOf(mobile));//--v1.0
+                //concurrencyService.manageRobbing(String.valueOf(mobile));//--v1.0
+                commonMqService.sendRobbingMsg(String.valueOf(mobile));//+v2.0
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
