@@ -96,7 +96,6 @@ public class RabbitmqController {
     @RequestMapping(value = Prefix+"/multi/message/send",method = RequestMethod.POST)
     public BaseResponse sednMultiTypeMessage(){
             BaseResponse baseResponse=new BaseResponse(StatusCode.Success);
-
             try{
                 Integer id=120;
                 String name="i喜喜";
