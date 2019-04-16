@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
 
 public class OrderRecord {
+
+    private String test;
+
     private Integer id;
 
     private String orderNo;
