@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class OrderRecord {
 
-    private String test;
+    private String b;private String c;
 
     private Integer id;
 
